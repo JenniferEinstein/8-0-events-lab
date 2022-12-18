@@ -14,13 +14,23 @@ for (let i = 0; i < 100; i++) {
 
 
   //
-element.addEventListener("click", function(){
-  element.currentColor === 
-});
 
 
-const clicky = document.querySelector("#palette");
-clicky.addEventListener("click", ()=>{
-  #current-color  #;
-});
+// element.addEventListener("click", function(){
+//   element.currentColor === 
+// });
+
+//div dot color says that it is picking only those divs wich also has the class of color
+const clicky = document.querySelectorAll("div.color");
+const currentShade = document.querySelector("#current-color")
+
+
+clicky.forEach((element)=> {
+  element.addEventListener("click", (event)=>{
+    const newish=element.style.background  //saves background color of what we just clicked on to "newish"
+    currentShade.style.background = newish
+  });
+})
+
+
 //when you click on a cell, change it to the current color.
