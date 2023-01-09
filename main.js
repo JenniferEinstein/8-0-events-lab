@@ -10,11 +10,12 @@ for (let i = 0; i < 100; i++) {
 
 // You may write your code here!
 
-// if the color clicked on in the #palette is not the #current-color, change the element background to the #current-color. But which element?
+// if the color clicked on in the #palette is not the #current-color, change the element background to the #current-color. 
 
-//And how do you change it? Do you set it? What is the actual function
-//do i need to do this separately for every color/box?
-
+/* But which element?
++ And how do you change it? Do you set it? What is the actual function
++ Do i need to do this separately for every color/box?
+*/
 
 
 //div dot color says that it is picking only those divs which also have the class of color
@@ -33,12 +34,12 @@ clicky.forEach((element)=> {
   });
 });
 
-
-//when you click on a cell, change it to the current color.
-//use .forEach to iterate through all the cells
-//listen for the click
-//if it clicks on a cell, change the background color of that cell to the current-color.
-
+/*
++ When you click on a cell, change it to the current color.
++ Use .forEach to iterate through all the cells
++ Listen for the click
++ If it clicks on a cell, change the background color of that cell to the current-color.
+*/
 neo.forEach((cells)=> {
   cells.addEventListener("click",(event)=>{
     cells.style.background = currentShade.style.background;
