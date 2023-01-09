@@ -26,7 +26,7 @@ const neo = document.querySelectorAll(".cell");
 
 clicky.forEach((element)=> {
   element.addEventListener("click", (event)=>{
-    const newish=element.style.background;  
+    const newish = element.style.background;  
       //saves background color of what we just clicked on to "newish"
     currentShade.style.background = newish;
       //turns the current shade to whatever we just saved to "newish"
@@ -35,7 +35,7 @@ clicky.forEach((element)=> {
 
 
 //when you click on a cell, change it to the current color.
-//use .forEach to interate through all the cells
+//use .forEach to iterate through all the cells
 //listen for the click
 //if it clicks on a cell, change the background color of that cell to the current-color.
 
@@ -53,13 +53,12 @@ const clearBoard = document.createElement("button");
 clearBoard.textContent= "Clear Board";
 
 //need to iterate this. 
-neo.forEach((cells) => {
-  clearBoard.addEventListener("click", (event) => {
-    for (let cell of cells) {
-      cells.style.background = "";  
+//add event listener
+clearBoard.addEventListener("click", (event) => {
+  neo.forEach((cells) => { 
+    cells.style.background = "";  
   }
-  currentShade.style.background = "";
-})});
+)});
 
 
 //didn't realized I needed a new Div.
